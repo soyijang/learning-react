@@ -21,9 +21,10 @@ const NewsList = ({ category }) => {
   const [loading, response, error] = usePromise(() => {
     const query = category === 'all' ? '' : `&category=${category}`;
     return axios.get(
-      `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=0a8c4202385d4ec1bb93b7e277b3c51f`,
+      `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=e97d941b414744a8bf0b22938caabbff`,
     );
   }, [category]);
+  //category 가 바뀔때마다 뉴스를 새로 불러와야 하기 때문에 의존배열에 추가
 
   // 대기중일 때
   if (loading) {
