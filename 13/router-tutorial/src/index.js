@@ -8,7 +8,8 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter>
+  //프로젝트에 리액트 라우터를 적용할 때는 index.js 에서 browserRouter 로 감싸줌.   
+  <BrowserRouter> 
     <App />
   </BrowserRouter>,
 );

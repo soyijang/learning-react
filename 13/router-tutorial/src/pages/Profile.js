@@ -11,6 +11,7 @@ const data = {
   },
 };
 const Profile = () => {
+  // url 파라미터는 useParams 를 사용하여 객체 형태로 조회
   const params = useParams();
   const profile = data[params.username];
 
